@@ -1,0 +1,50 @@
+
+h1.page_title
+{
+background-color:#b0c4de;
+}
+
+body
+{
+background-color:#ccccff;
+}
+
+
+
+
+#lista_esquerda
+{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+td.left_bar
+{
+
+background-color:#acccff;
+width:170px;
+
+}
+
+td.rigth_bar
+{
+width:150px;
+background-color:#acccff;
+}
+
+
+textarea
+ {
+ resize: none;
+ overflow:auto;
+} 
+
+div.post
+{
+width:550px;
+padding:10px;
+border:5px solid gray;
+margin:0px ;
+background-color:#ffffff;
+}
