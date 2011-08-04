@@ -38,6 +38,7 @@ textarea
  {
  resize: none;
  overflow:auto;
+ background-color:#ffffff;
 } 
 
 div.post
