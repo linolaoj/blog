@@ -23,7 +23,7 @@ class Deletor (webapp.RequestHandler):
 		post_key = cgi.escape(self.request.get('post_key'))
 		p = db.get(post_key)
 		p.delete()
-		self.response.out.write('deletado')
+		self.response.out.write('done')
 	
 
 		

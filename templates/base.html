@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<link rel="stylesheet" type="text/css" href="/stylesheets/blogstyle.css" />
+<script  type="text/javascript" src="/scripts/blogscript.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<title>{% block site_title %}Blogando {% endblock %}</title>
+</head>
+
+<body>
+<div align="center">
+
+
+<table width="900" border="0">
+<tr>
+<td colspan="3">
+{% block page_title%}
+<h1 class="page_title">Blog</h1>
+{% endblock %}
+</td>
+</tr>
+
+{% block user_id %}
+{% if user_nickname %}
+<tr>
+<td colspan="3">
+<h2>User: {{user_nickname}}</h2></td>
+</tr>
+{% endif %}
+
+{% endblock %}
+
+
+<tr valign="top">
+<td class="left_bar">
+{% block barra_esquerda%}
+
+{% endblock %}
+</td>
+
+<td>
+{% block page_content %}
+
+{% endblock %}
+</td>
+
+<td class="rigth_bar">
+{% block barra_direita%}
+<b>Barra lateral direita</b>
+{% endblock %}
+</td>
+</tr>
+<tr><td colspan="3"><hr/></td></tr>
+</table>
+
+
+<div>
+<form action="/postar" method="post">
+<div>Tittle :<input type="textfield" name="title"/></div>
+<div>Content:<textarea name="content" rows="3" col="60" ></textarea></div>
+<input type="submit" value= "postar"/>
+</form>
+</div>
+
+
+{% if logout_url %}
+<a href="{{logout_url}}">logout</a>
+{% endif %}
+
+</div>
+</body>
+
+</html>
